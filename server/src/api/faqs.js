@@ -6,6 +6,20 @@ const faqs = db.get("faqs");
 
 const router = express.Router();
 
+const deleteAll = (items) => {
+  items.map((item) => {
+    const { id } = item;
+    return id;
+  });
+};
+
+const UpdateAll = (items) => {
+  items.map((item) => {
+    const { id } = item;
+    return id;
+  });
+};
+
 //Read all
 router.get("/", async (req, res, next) => {
   try {
